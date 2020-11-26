@@ -3,6 +3,9 @@
 .nav {
   background: #121212;
   border-bottom: 5px solid $orange;
+  position: sticky;
+  top: 0px;
+  z-index: 99;
   &__items {
     padding: 0;
     list-style: none;
