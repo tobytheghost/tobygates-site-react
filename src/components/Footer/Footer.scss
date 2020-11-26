@@ -1,6 +1,10 @@
+@import "../../utils/colors";
+
 .footer {
   display: flex;
   flex-direction: column;
+  background: #121212;
+  color: #fff;
   &__copy {
     text-align: center;
   }
@@ -15,13 +19,16 @@
     display: flex;
     place-items: center;
     place-content: center;
-    background: #2196f3;
+    background: $orange;
     margin-left: 1rem;
     margin-right: 1rem;
     a {
       color: #fff;
       line-height: 1;
       padding: 1rem;
+      &:hover {
+        color: #fff;
+      }
     }
     svg {
       width: 2rem;

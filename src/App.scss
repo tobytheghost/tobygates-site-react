@@ -72,6 +72,9 @@ a {
     @media (min-width: 1025px) {
       width: 50%;
     }
+    &--full {
+      width: 100%;
+    }
   }
   &--no-padding-top {
     padding-top: 0;

@@ -7,4 +7,39 @@
       border-radius: 50%;
     }
   }
+  &__widgets {
+    padding-left: 0;
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+  }
+  &__widget {
+    width: 25%;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+  &__widget-icon {
+    background: #2196f3;
+    padding: 1.5rem;
+    border-radius: 50%;
+    svg {
+      font-size: 5rem;
+      color: #fff;
+    }
+  }
+  &__widget-title {
+    font-size: 1.5rem;
+    font-weight: 600;
+    padding-top: 15px;
+    padding-bottom: 15px;
+  }
+  &__widget-info {
+    line-height: 1.5;
+  }
 }

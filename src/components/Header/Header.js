@@ -3,6 +3,7 @@ import { scroller } from "react-scroll";
 import ArrowForwardIcon from "@material-ui/icons/ArrowForward";
 
 import "./Header.scss";
+import "./Stars.scss";
 
 function Header() {
   const scrollToSection = () => {
@@ -15,6 +16,9 @@ function Header() {
 
   return (
     <section className="header">
+      <div id="stars"></div>
+      <div id="stars2"></div>
+      <div id="stars3"></div>
       <div className="header__content">
         <div className="header__title">
           Hi, I'm
