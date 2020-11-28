@@ -1,10 +1,12 @@
 .about {
   &__image {
     text-align: center;
-    margin-bottom: 15px;
+    margin-bottom: 1rem;
+    padding-top: 1rem;
     img {
       margin: 0 auto;
       border-radius: 50%;
+      max-width: 250px;
     }
   }
   &__widgets {
@@ -12,17 +14,21 @@
     list-style: none;
     display: flex;
     flex-wrap: wrap;
-    padding-top: 2rem;
-    padding-bottom: 2rem;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
   }
   &__widget {
-    width: 25%;
+    width: 50%;
+    @media (min-width: 1025px) {
+      width: 25%;
+    }
     text-align: center;
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding-left: 15px;
-    padding-right: 15px;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    padding-bottom: 2rem;
   }
   &__widget-icon {
     background: #2196f3;
@@ -36,8 +42,8 @@
   &__widget-title {
     font-size: 1.5rem;
     font-weight: 600;
-    padding-top: 15px;
-    padding-bottom: 15px;
+    padding-top: 2rem;
+    padding-bottom: 1rem;
   }
   &__widget-info {
     line-height: 1.5;

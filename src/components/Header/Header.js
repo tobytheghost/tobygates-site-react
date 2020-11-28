@@ -2,6 +2,8 @@ import React from "react";
 import { scroller } from "react-scroll";
 import ArrowForwardIcon from "@material-ui/icons/ArrowForward";
 
+import { Nav } from "../../components";
+
 import "./Header.scss";
 import "./Stars.scss";
 
@@ -32,6 +34,7 @@ function Header() {
           </button>
         </div>
       </div>
+      <Nav />
     </section>
   );
 }

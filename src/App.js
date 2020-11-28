@@ -1,5 +1,12 @@
 import React from "react";
-import { Header, Footer, About, MyWork, Contact, Nav } from "./components";
+import {
+  Header,
+  Footer,
+  About,
+  //MyWork,
+  Contact,
+  Technologies,
+} from "./components";
 
 //Styles
 import "./App.scss";
@@ -9,9 +16,9 @@ function App() {
     <div className="App">
       <Header />
       <main className="main">
-        <Nav />
         <About />
-        <MyWork />
+        <Technologies />
+        {/* <MyWork /> */}
         <Contact />
       </main>
       <Footer />

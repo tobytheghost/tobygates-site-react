@@ -1,10 +1,7 @@
 @import "../../utils/colors.scss";
 
 .nav {
-  background: #121212;
-  border-bottom: 5px solid $orange;
-  position: sticky;
-  top: 0px;
+  $self: &;
   z-index: 99;
   &__items {
     padding: 0;
@@ -12,15 +9,17 @@
     display: flex;
     place-items: center;
     justify-content: center;
+    flex-direction: column;
   }
   &__item {
     padding: 10px 20px;
+    height: 5rem;
   }
   &__link {
     text-decoration: none;
     border: none;
     color: #fff;
-    font-size: 1.2rem;
+    font-size: 2rem;
     background: none;
     padding: 0;
     margin: 0;
@@ -29,6 +28,94 @@
     font-weight: 300;
     &:hover {
       color: #fff;
+    }
+  }
+  &__container {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    place-items: center;
+    place-content: center;
+    background: rgba(0, 0, 0, 0.95);
+    z-index: -1;
+  }
+  &__icon {
+    position: absolute;
+    top: 2rem;
+    right: 2rem;
+    z-index: 99;
+    button {
+      position: relative;
+      background: none;
+      border: none;
+      cursor: pointer;
+      width: 40px;
+      height: 35px;
+      padding: 0;
+    }
+    span {
+      display: block;
+      position: absolute;
+      top: 50%;
+      left: 0;
+      right: 0;
+      height: 7px;
+      background: #fff;
+      transition: background 0s 0.3s;
+      transform: translateY(-50%);
+      &::before,
+      &::after {
+        position: absolute;
+        display: block;
+        left: 0;
+        width: 100%;
+        height: 7px;
+        background-color: #fff;
+        content: "";
+        transition-duration: 0.3s, 0.3s;
+        transition-delay: 0.3s, 0s;
+      }
+      &::before {
+        top: -14px;
+        transition-property: top, transform;
+      }
+      &::after {
+        bottom: -14px;
+        transition-property: bottom, transform;
+      }
+    }
+  }
+  &--active {
+    #{ $self }__icon {
+      position: fixed;
+      span {
+        background: none;
+        &::before,
+        &::after {
+          transition-delay: 0s, 0.3s;
+        }
+        &::before {
+          top: 0;
+          -webkit-transform: rotate(45deg);
+          -moz-transform: rotate(45deg);
+          -o-transform: rotate(45deg);
+          transform: rotate(45deg);
+        }
+        &::after {
+          bottom: 0;
+          -webkit-transform: rotate(-45deg);
+          -moz-transform: rotate(-45deg);
+          -o-transform: rotate(-45deg);
+          transform: rotate(-45deg);
+        }
+      }
+    }
+    #{ $self }__container {
+      display: flex;
+      z-index: 99;
     }
   }
 }

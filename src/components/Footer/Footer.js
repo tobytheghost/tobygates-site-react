@@ -11,17 +11,29 @@ function Footer() {
       <div className="footer__links">
         <ul className="footer__items">
           <li className="footer__item">
-            <a href="linkedin">
+            <a
+              href="https://www.linkedin.com/in/tobygates/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               <LinkedInIcon />
             </a>
           </li>
           <li className="footer__item">
-            <a href="github">
+            <a
+              href="https://github.com/tobytheghost/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               <GitHubIcon />
             </a>
           </li>
           <li className="footer__item">
-            <a href="facebook">
+            <a
+              href="https://www.facebook.com/tobytheghost"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               <FacebookIcon />
             </a>
           </li>
