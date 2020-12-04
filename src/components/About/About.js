@@ -72,7 +72,7 @@ function About() {
             <div className="about__image">
               <img src="../../assets/img/toby-gates.png" alt="Toby Gates" />
             </div>
-            <div className="section__content">
+            <div className="section__content section__content--large">
               <p>
                 I'm a Full-Stack Developer currently working for{" "}
                 <a

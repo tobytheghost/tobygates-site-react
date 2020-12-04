@@ -48,7 +48,7 @@ if ($_SERVER['REQUEST_METHOD'] === "POST") {
 			"MIME-Version: 1.0\r\n" .
 			"Content-Type: text/html; charset=iso-8859-1\r\n";
 
-		$to = 'tobytheghost@hotmail.com';
+		$to = 'info@tobygates.co.uk';
 		$subject = 'Website Enquiry';
 
 		if (mail($to, $subject, $emailBody, $headers)) {

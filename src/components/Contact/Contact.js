@@ -36,7 +36,7 @@ function Contact() {
     if (name !== "" && email !== "" && message !== "") {
       axios({
         method: "POST",
-        url: "http://localhost/api/send.php",
+        url: "/api/send.php",
         data: { name: name, email: email, message: message },
       }).then((response) => {
         if (response.data.status === "success") {
@@ -67,7 +67,7 @@ function Contact() {
           </div> */}
           <div className="section__column section__column--full">
             <div className="section__subtitle">
-              <h3>Contact me using the form below:</h3>
+              <h3>Want to get in touch? Contact me using the form below:</h3>
             </div>
             <div className="section__content">
               <div
