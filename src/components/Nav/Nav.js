@@ -1,5 +1,7 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { Link, Events } from "react-scroll";
+import { Spring } from "react-spring/renderprops";
+import VisibilitySensor from "react-visibility-sensor";
 
 import "./Nav.scss";
 
@@ -17,11 +19,25 @@ function Nav() {
     setMenuActive(false);
   });
 
+  const [isVisible, setVisibility] = useState(false);
+  const [entered, setEntered] = useState(false);
+
+  const handleOnChange = (visibility) => {
+    setVisibility(visibility);
+  };
+  useEffect(() => {
+    if (isVisible) {
+      setEntered(true);
+    }
+  }, [isVisible]);
+
   return (
     <section className={"nav " + (menuActive ? "nav--active" : "")}>
-      <div className="nav__container">
-        <ul className="nav__items">
-          {/* <li className="nav__item">
+      <VisibilitySensor partialVisibility onChange={handleOnChange}>
+        {() => (
+          <nav className="nav__container">
+            <ul className="nav__items">
+              {/* <li className="nav__item">
             <button
               className="nav__link"
               onClick={() => {
@@ -32,23 +48,64 @@ function Nav() {
               Home
             </button>
           </li> */}
-          <li className="nav__item">
-            <Link className="nav__link" to="about" smooth={true}>
-              About
-            </Link>
-          </li>
-          <li className="nav__item">
-            <Link className="nav__link" to="technologies" smooth={true}>
-              My Skills
-            </Link>
-          </li>
-          <li className="nav__item">
-            <Link className="nav__link" to="contact" smooth={true}>
-              Contact
-            </Link>
-          </li>
-        </ul>
-      </div>
+              <Spring
+                delay={300}
+                to={{
+                  opacity: entered && menuActive ? 1 : 0,
+                  transform:
+                    entered && menuActive
+                      ? "translateY(0)"
+                      : "translateY(100px)",
+                }}
+              >
+                {(props) => (
+                  <li style={{ ...props }} className="nav__item">
+                    <Link className="nav__link" to="about" smooth={true}>
+                      About
+                    </Link>
+                  </li>
+                )}
+              </Spring>
+              <Spring
+                delay={450}
+                to={{
+                  opacity: entered && menuActive ? 1 : 0,
+                  transform:
+                    entered && menuActive
+                      ? "translateY(0)"
+                      : "translateY(100px)",
+                }}
+              >
+                {(props) => (
+                  <li style={{ ...props }} className="nav__item">
+                    <Link className="nav__link" to="technologies" smooth={true}>
+                      My Skills
+                    </Link>
+                  </li>
+                )}
+              </Spring>
+              <Spring
+                delay={600}
+                to={{
+                  opacity: entered && menuActive ? 1 : 0,
+                  transform:
+                    entered && menuActive
+                      ? "translateY(0)"
+                      : "translateY(100px)",
+                }}
+              >
+                {(props) => (
+                  <li style={{ ...props }} className="nav__item">
+                    <Link className="nav__link" to="contact" smooth={true}>
+                      Contact
+                    </Link>
+                  </li>
+                )}
+              </Spring>
+            </ul>
+          </nav>
+        )}
+      </VisibilitySensor>
       <div className="nav__icon">
         <button
           className="nav__button"
