@@ -8,6 +8,8 @@ import { library } from "@fortawesome/fontawesome-svg-core";
 import { fas } from "@fortawesome/free-solid-svg-icons";
 import { fab } from "@fortawesome/free-brands-svg-icons";
 
+import "./Technologies.scss";
+
 library.add(fas);
 library.add(fab);
 
@@ -61,7 +63,7 @@ function Technologies() {
                         style={{ color: "#f48fb1", fontSize: "4rem" }}
                       />
                     </div>
-                    <h4>PHP</h4>
+                    <h3 className="skill__title">PHP</h3>
                   </Card>
                 )}
               </Spring>
@@ -73,14 +75,14 @@ function Technologies() {
                 }}
               >
                 {(props) => (
-                  <Card style={{ ...props }} className="align-center">
+                  <Card style={{ ...props }} className="skill align-center">
                     <div className="section__icons">
                       <FontAwesomeIcon
                         icon={["fab", "js-square"]}
                         style={{ color: "#ff9800", fontSize: "4rem" }}
                       />
                     </div>
-                    <h4>Javascript</h4>
+                    <h3 className="skill__title">Javascript</h3>
                   </Card>
                 )}
               </Spring>
@@ -99,7 +101,7 @@ function Technologies() {
                         style={{ color: "#2196f3", fontSize: "4rem" }}
                       />
                     </div>
-                    <h4>WordPress</h4>
+                    <h3 className="skill__title">WordPress</h3>
                   </Card>
                 )}
               </Spring>
@@ -118,7 +120,7 @@ function Technologies() {
                         style={{ color: "#f48fb1", fontSize: "4rem" }}
                       />
                     </div>
-                    <h4>Sass (Scss)</h4>
+                    <h3 className="skill__title">Sass (Scss)</h3>
                   </Card>
                 )}
               </Spring>
@@ -137,7 +139,7 @@ function Technologies() {
                         style={{ color: "#ff9800", fontSize: "4rem" }}
                       />
                     </div>
-                    <h4>HTML5</h4>
+                    <h3 className="skill__title">HTML5</h3>
                   </Card>
                 )}
               </Spring>
@@ -156,7 +158,7 @@ function Technologies() {
                         style={{ color: "#2196f3", fontSize: "4rem" }}
                       />
                     </div>
-                    <h4>React</h4>
+                    <h3 className="skill__title">React</h3>
                   </Card>
                 )}
               </Spring>
@@ -175,7 +177,7 @@ function Technologies() {
                         style={{ color: "#f44336", fontSize: "4rem" }}
                       />
                     </div>
-                    <h4>Git</h4>
+                    <h3 className="skill__title">Git</h3>
                   </Card>
                 )}
               </Spring>
@@ -194,7 +196,7 @@ function Technologies() {
                         style={{ color: "#2196f3", fontSize: "4rem" }}
                       />
                     </div>
-                    <h4>Docker</h4>
+                    <h3 className="skill__title">Docker</h3>
                   </Card>
                 )}
               </Spring>
@@ -205,7 +207,7 @@ function Technologies() {
                 style={{ color: "#4caf50", fontSize: "4rem" }}
               />
             </div>
-            <h4>Node.js</h4>
+            <h3 className="skill__title">Node.js</h3>
           </Card> */}
             </div>
           </article>
