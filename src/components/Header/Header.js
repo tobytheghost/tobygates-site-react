@@ -47,31 +47,23 @@ function Header() {
                 }}
               >
                 {(props) => (
-                  <h1 style={{ ...props }} className="header__title">
-                    Hi, I'm
-                    <span className="header__title--alternative">
-                      {" "}
-                      Toby Gates
+                  <h1>
+                    <span style={{ ...props }} className="header__title">
+                      Hi, I'm
+                      <span className="header__title--alternative">
+                        {" "}
+                        Toby Gates
+                      </span>
+                      .
                     </span>
-                    .
+                    <span style={{ ...props }} className="header__subtitle">
+                      I'm a full-stack web developer.
+                    </span>
                   </h1>
                 )}
               </Spring>
               <Spring
                 delay={450}
-                to={{
-                  opacity: entered ? 1 : 0,
-                  transform: entered ? "translateY(0)" : "translateY(100px)",
-                }}
-              >
-                {(props) => (
-                  <h2 style={{ ...props }} className="header__subtitle">
-                    I'm a full-stack web developer.
-                  </h2>
-                )}
-              </Spring>
-              <Spring
-                delay={600}
                 to={{
                   opacity: entered ? 1 : 0,
                   transform: entered ? "translateY(0)" : "translateY(100px)",
