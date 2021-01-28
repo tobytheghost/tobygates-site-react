@@ -1,4 +1,4 @@
-# Personal Portfolio Website - `tobygates.co.uk`
+# Personal Portfolio Website
 
 This project was built as a portfolio piece but also to be a place to contain my portfolio of work. The site is built in the React framework.
 
